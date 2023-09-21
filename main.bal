@@ -24,7 +24,7 @@ service / on new http:Listener(port) {
         if (ouputText is string) {
             return ouputText;
         } else if (ouputText is error) {
-            return "Error: "+ouputText.message();
+            return ouputText.message();
         }
         else {
             return "Error while rewriting the text !";
